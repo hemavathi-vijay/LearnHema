@@ -1,0 +1,38 @@
+p {
+    text-align: justify;
+    font-family: Arial, Helvetica, sans-serif;
+  
+}
+
+h1,h2,h3 {
+    text-align: center;
+    color:brown;
+}
+ul{
+    list-style-image: url(images/tiny-coffee-cup.gif);
+}
+
+a:link,a:visited{
+    text-decoration: none;
+    color: brown;
+    font-weight: bold;
+}
+a:hover{
+    color:black;
+}
+
+nav ul{
+    list-style-type: none;
+}
+nav li{
+    display: inline;
+}
+
+nav a:link, nav a:visited{
+    background-color: brown;
+    color: white;
+}
+
+nav a:hover{
+    background-color: black;
+}

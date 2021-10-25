@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Learn</title>
+    <style>
+      .container {
+        border: 3px solid lightgray;
+        display: grid;
+        grid-template-rows: repeat(3, 100px);
+        grid-template-columns: repeat(2, 100px);
+        justify-content: center;
+        align-items: center;
+      }
+      .box {
+        width: 5rem;
+        height: 5rem;
+        background-color: gold;
+        margin: 1rem;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <article class="box">A</article>
+      <article class="box">B</article>
+      <article class="box">C</article>
+      <article class="box">D</article>
+    </div>
+  </body>
+</html>

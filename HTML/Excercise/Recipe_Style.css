@@ -1,0 +1,31 @@
+@font-face {
+  font-family: "notoSerif";
+  src: url("CSS/Fonts/NotoSerif/notoserif-regular-webfont.woff2")
+      forCSS/Fonts/NotoSerif/notoserif-regular-webfont.woff")
+      format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "notoSerif";
+  src: url("CSS/Fonts/NotoSerif/notoserif-semibold-webfont.woff2")
+      format("woff2"),
+    url("CSS/Fonts/NotoSerif/notoserif-semibold-webfont.woff")
+      format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+.container {
+  width: 1140px;
+  font-family: "notoSerif",Georgia, Times, serif;
+  font-weight: normal;
+  font-style: normal;
+}
+
+.para_1 {
+  font-family:"notoSerif",Georgia,  Times, serif;
+  font-size: 1rem;
+  font-style: italic;
+}
