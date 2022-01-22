@@ -1,0 +1,19 @@
+Git
+
+to remove Git repository
+
+rm -rf .git 
+
+git status
+
+git add file.txt
+
+git commit -m " Initial commit."
+// -m means message
+
+just git commit will open editor to type the short discription.
+
+
+remove a commited file from staging area and move it to .gitignore
+
+use the git command --cached

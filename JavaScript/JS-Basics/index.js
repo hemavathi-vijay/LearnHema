@@ -1,88 +1,96 @@
 
-
 /*
-const numbers = arrayFromRange(9,15);
-
-console.log(numbers);
-
-function arrayFromRange(min,max){
-const output =[];
-    for(let element = min; element <= max;element++)
-     output.push(element);
-
-     return output;
+const movie = {
+    title : 'Roja',
+    releaseYear : 1992,
+    rating : 4.9,
+    Director :'Mani-rathnam_director-finally',
+    LeadHero : 'Aravind'
 }
+showObj(movie.Director);
 
-function includes(array,element){
-    for(let i of array)
-   if (i === element)
-   return true;
+function showObj(obj){
 
-   return false;
-   
-}
-
-console.log(includes(numbers,13));
-
-
-
-const numbers =[10,12,16,14,19,13,20,13];
-function except(array,excluded){
-    const output =[];
-for(let element of array)
-
-if(!excluded.includes(element))
-output.push(element);
-
-return output;
-}
-
-const newArray = except(numbers,[13,20]);
-
-console.log(newArray);
-
-
--------------------
-
-
-
-const numbers=[1,2,3,4,5];
-
-function move(array,index,offset){
-
-    const output = [...array];
-
-    if(offset >= array.length)
-    return console.error('Invalid offset');
+    let output = obj.toString();
+  
     
+    for(let value of output){
+        if(value === "-" || value === "_") {
+        let index = output.indexOf(value)+1;
+        let caps = output.charAt(index).toUpperCase();
+        output = output.replace(value," ").replace(output.charAt(index),caps);
+        console.log(value,caps,index);
+    }
+        
+    }
 
-    output.forEach((element,i) => {
-        if(element === index) {
-        output.splice(i,1);
-        output.splice(offset,0,element);     
-        }
-    });
+    console.log(output);
+}
+
+//--------------------------------------------------------------------------------------------
+
+const word = "HemavathiV";
+
+
+if(word.length%2)
+console.log(word.charAt(word.length/2));
+
+else {
+console.log(word.slice((word.length/2)-1,(word.length/2)+1));
+}
+
+//------------------------------------------------------------------------------
+
+const output = alphabetPosition("TThis is the funniest it can't get any bad!");
+
+function alphabetPosition(text) {
+
+    const alphabetNumbers = [0,'a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z'];
+    const output = [];
+    text = text.toLowerCase().replaceAll(' ','');
+
+    for(let element of text) {
+        for(let num of alphabetNumbers) {
+        if (num === element)
+        output.push(alphabetNumbers.indexOf(num));
+
+         }
+    }
+
+    console.log(alphabetNumbers,text,output.toString());
+    return output.toString();
+  }
+//____________________________________________________________________________________________________________________________________
+  */
+/*
+const result = tribonacci([1,1,1],10);
+
+console.log(result);
+
+function tribonacci(signature,n){
+    const output = [...signature];
+
+    for(let key=3; key <= n-1;key++){
+        output.push(output[key-1]+output[key-2]+output[key-3]);
+    }
+    console.log(output);
 
     return output;
-}
+  }
 
-console.log(move(numbers,2,0));
+  */
+//--------------------------------------------------------------
+/*
+  const numbers =[1,2,3,4,5,6,7,8,9,0];
+
+  const output =`( ${numbers[0]}${numbers[1]}${numbers[2]}) ${numbers[3]}${numbers[4]}${numbers[5]}-${numbers[6]}${numbers[7]}${numbers[8]}${numbers[9]}`;
+
+  console.log(output);
 */
 
+const str = " The worse website everio!";
+console.log(disemvowel(str));
+function disemvowel(str) {
 
-const numbers=[1,2,3,4,1,5,1];
-
-const count = countOccurance(numbers,5);
-console.log(count);
-
-function countOccurance(array,searchElement){
-
-   // let count =0;
-
-    for(let element of array)
-        if(element === searchElement)
-        count++;
-    
-
-    return count;
-}
+    return str.replace(/[aeiou]/gi,"") ;
+  }
