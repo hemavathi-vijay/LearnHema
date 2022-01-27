@@ -8,6 +8,7 @@ import Rentals from "./components/rentals";
 import NotFound from "./components/notFound";
 import MoviesFrom from "./components/moviesForm";
 import LoginForm from "./components/loginForm";
+import Register from "./components/register";
 import "./App.css";
 
 function App() {
@@ -18,10 +19,11 @@ function App() {
         <Routes>
           <Route path="/movies/:id" element={<MoviesFrom />} />
           <Route path="/login" element={<LoginForm />} />
-          <Route path="/movies" element={<Movies />}></Route>
-          <Route path="/customers" element={<Customers />}></Route>
-          <Route path="/rentals" element={<Rentals />}></Route>
-          <Route path="/notFound" element={<NotFound />}></Route>
+          <Route path="/movies" element={<Movies />} />
+          <Route path="/customers" element={<Customers />} />
+          <Route path="/rentals" element={<Rentals />} />
+          <Route path="/register" element={<Register />} />
+          <Route path="/notFound" element={<NotFound />} />
           <Route path="/" exact element={<Navigate replace to="/movies" />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
